@@ -18,6 +18,9 @@
 		B9A46283183E07FA00629391 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A46262183E07FA00629391 /* Cocoa.framework */; };
 		B9A4628B183E07FA00629391 /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = B9A46289183E07FA00629391 /* InfoPlist.strings */; };
 		B9A4628D183E07FA00629391 /* ____Tests.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A4628C183E07FA00629391 /* ____Tests.m */; };
+		B9A46298183E09A400629391 /* LoadWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = B9A46297183E09A400629391 /* LoadWebView.m */; };
+		B9A4629A183E09CA00629391 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B9A46299183E09CA00629391 /* WebKit.framework */; };
+		B9A4629C183E0C6400629391 /* HTML in Resources */ = {isa = PBXBuildFile; fileRef = B9A4629B183E0C6400629391 /* HTML */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -50,6 +53,10 @@
 		B9A46288183E07FA00629391 /* 在线电视Tests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "在线电视Tests-Info.plist"; sourceTree = "<group>"; };
 		B9A4628A183E07FA00629391 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		B9A4628C183E07FA00629391 /* ____Tests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "____Tests.m"; sourceTree = "<group>"; };
+		B9A46296183E09A400629391 /* LoadWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LoadWebView.h; sourceTree = "<group>"; };
+		B9A46297183E09A400629391 /* LoadWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LoadWebView.m; sourceTree = "<group>"; };
+		B9A46299183E09CA00629391 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		B9A4629B183E0C6400629391 /* HTML */ = {isa = PBXFileReference; lastKnownFileType = folder; path = HTML; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,6 +64,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B9A4629A183E09CA00629391 /* WebKit.framework in Frameworks */,
 				B9A46263183E07FA00629391 /* Cocoa.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -95,6 +103,7 @@
 		B9A46261183E07FA00629391 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				B9A46299183E09CA00629391 /* WebKit.framework */,
 				B9A46262183E07FA00629391 /* Cocoa.framework */,
 				B9A46281183E07FA00629391 /* XCTest.framework */,
 				B9A46264183E07FA00629391 /* Other Frameworks */,
@@ -117,7 +126,10 @@
 			children = (
 				B9A46274183E07FA00629391 /* Down_hkAppDelegate.h */,
 				B9A46275183E07FA00629391 /* Down_hkAppDelegate.m */,
+				B9A46296183E09A400629391 /* LoadWebView.h */,
+				B9A46297183E09A400629391 /* LoadWebView.m */,
 				B9A46277183E07FA00629391 /* MainMenu.xib */,
+				B9A4629B183E0C6400629391 /* HTML */,
 				B9A4627A183E07FA00629391 /* Images.xcassets */,
 				B9A46269183E07FA00629391 /* Supporting Files */,
 			);
@@ -235,6 +247,7 @@
 				B9A4627B183E07FA00629391 /* Images.xcassets in Resources */,
 				B9A46273183E07FA00629391 /* Credits.rtf in Resources */,
 				B9A46279183E07FA00629391 /* MainMenu.xib in Resources */,
+				B9A4629C183E0C6400629391 /* HTML in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -255,6 +268,7 @@
 			files = (
 				B9A4626F183E07FA00629391 /* main.m in Sources */,
 				B9A46276183E07FA00629391 /* Down_hkAppDelegate.m in Sources */,
+				B9A46298183E09A400629391 /* LoadWebView.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -465,6 +479,7 @@
 				B9A46292183E07FA00629391 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		B9A46293183E07FA00629391 /* Build configuration list for PBXNativeTarget "在线电视Tests" */ = {
 			isa = XCConfigurationList;
@@ -473,6 +488,7 @@
 				B9A46295183E07FA00629391 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

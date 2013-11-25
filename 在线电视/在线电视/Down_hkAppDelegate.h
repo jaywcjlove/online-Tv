@@ -8,7 +8,11 @@
 
 #import <Cocoa/Cocoa.h>
 
-@interface Down_hkAppDelegate : NSObject <NSApplicationDelegate>
+@interface Down_hkAppDelegate : NSObject <NSApplicationDelegate,NSWindowDelegate>{
+    
+    NSStatusItem *trayItem;
+
+}
 
 @property (assign) IBOutlet NSWindow *window;
 

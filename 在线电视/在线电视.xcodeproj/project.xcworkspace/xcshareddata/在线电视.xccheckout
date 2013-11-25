@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4F475625-02E5-4CAF-A7B5-DACCF52EC87B</string>
+	<key>IDESourceControlProjectName</key>
+	<string>在线电视</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>B46AA54B-E6C9-48DA-968D-833F4369AFA9</key>
+		<string>https://github.com/jaywcjlove/online-Tv.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>在线电视/在线电视.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>B46AA54B-E6C9-48DA-968D-833F4369AFA9</key>
+		<string>../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/jaywcjlove/online-Tv.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>B46AA54B-E6C9-48DA-968D-833F4369AFA9</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>B46AA54B-E6C9-48DA-968D-833F4369AFA9</string>
+			<key>IDESourceControlWCCName</key>
+			<string>online-Tv</string>
+		</dict>
+	</array>
+</dict>
+</plist>

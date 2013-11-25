@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>广播电台</title>
+	<script src="radio.data.json.js" type="text/javascript"></script>
+</head>
+<style type="text/css">
+body,html{padding: 0;margin: 0;font-family: "Helvetica Neue", Arial, Helvetica, Geneva, sans-serif;font-size: 12px;color: #003f6b;}a{text-decoration: none;color: #003f6b;}
+ul,li{margin: 0;padding: 0;list-style: none;}
+#headTitle{background: #8bafd3;line-height: 25px;height: 25px;text-indent: 10px;}
+#headTitle img{height: 12px;width: 12px;vertical-align: middle;margin: -3px 2px 0 0;}
+
+#sortMenu,#sortSubCon{float: left;float: left;overflow: auto;}
+#sortMenu{width: 30%;background: #d5e8f0;}
+#sortMenu ul{padding: 5px 0 0 5px;}
+#sortMenu li{display: inline-block;}
+#sortMenu li.ok{background: #fff;
+}
+#sortMenu li a{width: 40px;display: inline-block;text-align: center;line-height: 21px;}
+#sortMenu li a:hover{background: #e7ebf0;text-decoration: underline;}
+#sortSubCon{width: 70%;}
+#sortSubCon li{border-bottom: 1px solid #e7ebf0;line-height: 23px;}
+#sortSubCon li a{display: block;line-height: 23px;text-indent: 5px;}
+#sortSubCon li a:hover{background: #e7ebf0;text-decoration: underline;}
+
+
+#play{height: 0;overflow: hidden;}
+</style>
+<body>
+<!--<iframe width="960" height="530" marginwidth="0" marginheight="0" align="left" frameborder="0" scrolling="no" src="http://bbs.hpxian.com/images/hpxian_ylzx/music.htm" class="share_self"></iframe>-->
+<iframe src="http://mini.fengyunzhibo.com/mini/fymini.htm?f=tvs1cn&amp;code=null#width=960&amp;height=530&amp;tv=0000000001_1342934731354" frameborder="0" scrolling="no" width="960" height="530"></iframe>
+<div id="headTitle">正在收听：-</div>
+<div id="play"></div>
+<div id="sortMenu">
+	<ul>
+		<li><a href="#">上海</a></li>
+	</ul>
+</div>
+<div id="sortSubCon">
+	<ul>
+		<li><a href="#">四川城市之声</a></li>
+	</ul>
+</div>
+</body>
+<script type="text/javascript">
+
+function loadfram() {
+	var tit=document.getElementById("headTitle");
+	var sort=document.getElementById("sortMenu");
+	var subCon=document.getElementById("sortSubCon");
+	if (tit&&sort&&subCon) {
+		sort.style.height=document.documentElement.clientHeight-25 + "px";
+		subCon.style.height=document.documentElement.clientHeight-25 + "px";
+	}
+	
+	if (radio&&radio.sort&&radio.sort.length>0) {
+		var htmlm="";
+		htmlm+='<ul>';
+		for (var i = 0; i < radio.sort.length; i++) {
+			htmlm+='<li><a href="javascript:loadframSub('+i+')">'+radio.sort[i].city+'</a></li>';
+		}
+		htmlm+='</ul>';
+		sort.innerHTML=htmlm;
+	}
+	
+	loadframSub(-1)
+}
+
+function loadframSub(num) {
+	var subCon=document.getElementById("sortSubCon");
+	var sort=document.getElementById("sortMenu");
+	
+	
+	if (num==(-1)) {
+		num = num == (-1)?num=0:num;
+		sort.children[0].children[0].className="ok";
+	}
+	for (var i = 0; i < radio.sort.length; i++) {
+		sort.children[0].children[i].className="";
+	}
+	sort.children[0].children[num].className="ok";
+	
+	if (radio.sort[num].more&&radio.sort[num].more.length>0) {
+		var htmls='';
+		htmls+='<ul>';
+		for (var i = 0; i < radio.sort[num].more.length; i++) {
+			htmls+='<li><a href="javascript:playRadio(\''+radio.sort[num].more[i].name+'\',\''+radio.sort[num].more[i].url+'\')">'+radio.sort[num].more[i].name+'</a></li>'
+		}
+		htmls+='</ul>';
+		subCon.innerHTML=htmls;
+	}
+}
+
+function playRadio(name,url) {
+	var tit=document.getElementById("headTitle");
+	var pRadio=document.getElementById("play");
+	if (pRadio&&tit) {
+		pRadio.innerHTML='';
+		tit.innerHTML='<img src="loading.icon.gif"/>正在收听：'+name;
+		
+		var iframe = document.createElement("iframe");
+		if (url) {
+			iframe.src=url;
+		}
+		
+		if (iframe.attachEvent){
+		    iframe.attachEvent("onload", function(){
+		        alert("Local iframe is now loaded.");
+		    });
+		} else {
+		    iframe.onload = function(){
+		        tit.innerHTML='正在收听：'+name;
+		    };
+		}
+		pRadio.appendChild(iframe);
+	}
+}
+
+
+
+
+loadfram();
+
+window.onresize=function () {
+loadfram();
+}
+</script>
+</html>
